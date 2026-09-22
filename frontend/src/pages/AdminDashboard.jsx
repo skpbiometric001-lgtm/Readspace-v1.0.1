@@ -454,7 +454,7 @@ export default function AdminDashboard() {
               <span style={{ color:'rgba(255,255,255,.55)', fontSize:'.82rem' }}>Admin</span>
             </>
           )}
-          <button onClick={handleLogout} style={{ background:'#ef4444', color:'#fff', border:'none', padding: isMobile ? '.35rem .6rem' : '.35rem .9rem', borderRadius:8, fontSize:'.82rem', fontWeight:600, cursor:'pointer', whiteSpace:'nowrap' }}>
+          <button onClick={() => handleLogout()} style={{ background:'#ef4444', color:'#fff', border:'none', padding: isMobile ? '.35rem .6rem' : '.35rem .9rem', borderRadius:8, fontSize:'.82rem', fontWeight:600, cursor:'pointer', whiteSpace:'nowrap' }}>
             🚪{!isMobile && ' Logout'}
           </button>
         </div>
@@ -505,7 +505,7 @@ export default function AdminDashboard() {
             </button>
           ))}
           <div style={{ marginTop:'auto', padding:'0 .5rem' }}>
-            <button className="sidebar-link" onClick={handleLogout} style={{ justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start' }}>
+            <button className="sidebar-link" onClick={() => handleLogout()} style={{ justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start' }}>
               <span style={{ fontSize:'1.1rem' }}>🚪</span>
               {(!collapsed || isMobile) && <span>Logout</span>}
             </button>
